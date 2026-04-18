@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JD Joyería</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #ebeae6;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #431111;
+    color: rgb(136, 63, 63);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    width: 88px;
+    height: 88px;
+    object-fit: contain;
+}
+.logo  {
+    font-size: 78px;
+}
+
+.menu button {
+    background: #df6a76;
+    border: none;
+    padding: 8px 12px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+/* CARRUSEL */
+.carrusel {
+    width: 100%;
+    height: 400px;
+    margin: 0;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.active {
+    display: block;
+}
+
+/* PRODUCTOS */
+.productos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    width: 200px;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card h3 {
+    padding: 10px;
+}
+
+.precio {
+    color: green;
+    font-weight: bold;
+    padding: 0 10px 10px;
+}
+
+/* SECCIONES */
+.seccion {
+    display: none;
+}
+
+.activa {
+    display: block;
+}
+
+/* CONTACTO */
+input, textarea {
+    width: 60%;
+    padding: 10px;
+    margin: 10px;
+}
+
+button.enviar {
+    background: #131921;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+}
+  .info {
+    background: #f5f5f5;
+    padding: 40px;
+    text-align: center;
+    color: #333;
+}
+
+.info h2 {
+    color: #b8860b;
+    margin-bottom: 20px;
+}
+
+.info h3 {
+    color: #8b0000;
+    margin-top: 25px;
+}
+
+.info p {
+    max-width: 700px;
+    margin: 10px auto;
+    line-height: 1.6;
+}
+
+.info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info li {
+    margin: 5px 0;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+     <div class="logo">
+       <img src="logo.png-removebg-preview.png"alt="Logo">
+                  
+     </div>
+
+    
+
+    <div class="menu">
+        <button onclick="mostrarSeccion('Inicio')">Inicio</button>
+        <button onclick="mostrarSeccion('productos')">Productos</button>
+        <button onclick="mostrarSeccion('materiales')">Materiales</button>
+        <button onclick="mostrarSeccion('contacto')">Contacto</button>
+        
+    </div>
+</div>
+
+<!-- CARRUSEL -->
+<div class="carrusel">
+    <img src="WhatsApp Image 2026-04-16 at 7.16.58 PM.jpeg" class="slide active">
+    <img src="WhatsApp Image 2026-04-16 at 7.20.49 PM.jpeg" class="slide">
+    <img src="3.jpeg" class="slide">
+    <img src="4.jpeg" class="slide">
+    <img src="5.jpeg" class="slide">
+    <img src="6.jpeg" class="slide">
+</div>
+
+
+<section class="info">
+    <h2>Bienvenido a JD Joyería</h2>
+    <p>
+        En JD Joyería cada pieza cuenta una historia. Nos especializamos en crear joyas únicas
+        que reflejan elegancia, estilo y momentos inolvidables.
+    </p>
+
+    <h3>Sobre Nosotros</h3>
+    <p>
+        Creemos que una joya no es solo un accesorio, es una expresión de amor, personalidad
+        y distinción. Trabajamos con materiales de alta calidad como oro y plata.
+    </p>
+
+    <h3>Productos</h3>
+    <p>
+        Contamos con anillos, collares, pulseras y aretes diseñados para resaltar tu estilo
+        en cualquier ocasión.
+    </p>
+
+    <h3>¿Por qué elegirnos?</h3>
+    <ul>
+        <li>Alta calidad</li>
+        <li>Diseños exclusivos</li>
+        <li>Precios accesibles</li>
+        <li>Atención personalizada</li>
+    </ul>
+</section>
+
+
+<!-- PRODUCTOS -->
+<div id="productos" class="seccion ">
+    <div class="productos">
+
+        <div class="card">
+            <img src="1..jpeg">
+            <h3>Anillo de plata</h3>
+            <div class="precio">$1200</div>
+        </div>
+
+        <div class="card">
+            <img src="2..jpeg">
+            <h3>Anillo de Plata</h3>
+            <div class="precio">$800</div>
+        </div>
+
+        <div class="card">
+            <img src="3..jpeg">
+          <h3>Anilo de oro</h3>
+            <div class="precio">$500</div>
+        </div>
+         <div class="card">
+            <img src="50.jpeg">
+            <h3>Anillo de oro</h3>
+            <div class="precio">$800</div>
+        </div>
+    
+
+        <div class="card">
+            <img src="11.jpeg">
+            <h3>Collar de estrella</h3>
+            <div class="precio">$800</div>
+        </div>
+
+          <div class="card">
+            <img src="12.jpeg">
+            <h3>Collar de corazón</h3>
+            <div class="precio">$1200</div>
+        </div>
+
+        <div class="card">
+            <img src="13.jpeg">
+            <h3>Conjunto collar y aretes</h3>
+            <div class="precio">$800</div>
+        </div>
+
+        <div class="card">
+            <img src="14.jpeg">
+          <h3>collar doble de mariposas</h3>
+            <div class="precio">$500</div>
+        </div>
+ 
+
+        <div class="card">
+            <img src="15.jpeg">
+            <h3>Collar de estrella</h3>
+            <div class="precio">$800</div>
+        </div>
+
+          <div class="card">
+            <img src="16.jpeg">
+            <h3>Collar de corazón</h3>
+            <div class="precio">$1200</div>
+        </div>
+
+        <div class="card">
+            <img src="17.jpeg">
+            <h3>Conjunto collar y aretes</h3>
+            <div class="precio">$800</div>
+        </div>
+
+        <div class="card">
+            <img src="18.jpeg">
+          <h3>collar doble de mariposas</h3>
+            <div class="precio">$500</div>
+        </div>
+      
+
+       
+    </div>
+</div>
+
+<div id="materiales" class="seccion">
+    <h2>Materiales</h2>
+    <div class="materiales-container">
+
+        <div class="material-card">
+            <img src="19.jpeg" alt="Oro">
+            <h3>Oro</h3>
+            <p>Metal precioso de alta durabilidad y elegancia atemporal. Disponible en 10k, 14k y 18k.</p>
+        </div>
+
+        <div class="material-card">
+            <img src="20.jpeg" alt="Plata">
+            <h3>Plata</h3>
+            <p>Brillante, versátil y accesible. Ideal para uso diario y diseños modernos.</p>
+        </div>
+
+        <div class="material-card">
+            <img src="21.jpeg" alt="Cobre">
+            <h3>Cobre</h3>
+            <p>Resistente y moderno, con un tono cálido perfecto para estilos artesanales.</p>
+        </div>
+
+        <div class="material-card">
+            <img src="22.jpeg" alt="Acero inoxidable">
+            <h3>Acero inoxidable</h3>
+            <p>Muy resistente a la corrosión, ideal para joyería duradera.</p>
+        </div>
+
+        <div class="material-card">
+            <img src="23.jpeg" alt="Baño de oro">
+            <h3>Baño de oro</h3>
+            <p>Recubrimiento de oro que brinda elegancia a menor costo.</p>
+        </div>
+
+        <div class="material-card">
+            <img src="24.jpeg" alt="Esmeral">
+            <h3>Piedras naturales</h3>
+            <p>Como cuarzo, ónix y amatista, aportan estilo y significado.</p>
+        </div>
+
+    </div>
+</section>
+
+<div id="Contacto "class="seccion">
+ <h2>Contáctanos</h2>
+  <div class="contacto">
+   
+
+
+   <input type="text" placeholder="Nombre" required>
+        <input type="email" placeholder="Correo" required>
+        <textarea placeholder="Mensaje" required></textarea>
+
+        <button type="submit">Enviar</button>
+    
+   </div>
+</section>
+   
+
+<style>
+.materiales {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f9f9f9;
+}
+
+.materiales h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.materiales-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.material-card  {
+    background: white;
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    transition: center;
+}
+.material-card img {
+   width: 100%;
+   height: 120px;
+   object-fit: cover;
+   border-radius: 10px;
+}
+
+.material-card h3 {
+    margin-bottom: 16px;
+    border-radius: 8px 0 5px;
+}
+
+.material-card p {
+    font-size: 12px;
+    color: #555;
+    
+}
+</style>
+
+ 
+<style>
+   
+/* CONTENEDOR */
+.contacto {
+    background: #f5f5f5;
+    padding: 40px;
+    border-radius: 15px;
+    width: 60%;
+    margin: 50px auto;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* TITULO */
+.contacto h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* INPUTS Y TEXTAREA */
+.contacto input,
+.contacto textarea {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* EFECTO AL SELECCIONAR */
+.contacto input:focus,
+.contacto textarea:focus {
+    border-color: #00bcd4;
+    box-shadow: 0 0 5px rgba(0,188,212,0.5);
+}
+
+/* TEXTAREA */
+.contacto textarea {
+    height: 100px;
+    resize: none;
+}
+
+/* BOTÓN ESTILO ELEGANTE */
+.contacto button {
+    margin-top: 15px;
+    background: linear-gradient(to right, #00bcd4, #0097a7);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+/* HOVER */
+.contacto button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+</style>
+<!-- JS -->
+<script>
+let index = 0;
+const slides = document.querySelectorAll(".slide");
+
+setInterval(() => {
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+}, 3000);
+
+function mostrarSeccion(id) {
+    document.querySelectorAll(".seccion").forEach(s => s.classList.remove("activa"));
+    document.getElementById(id).classList.add("activa");
+}
+</script>
+
+</body>
+</html>
